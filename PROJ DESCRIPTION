@@ -1,0 +1,50 @@
+INTRODUCTION:
+
+A Chatbot is a software application used to conduct an online
+chat conversation via text or text-to-speech, in lieu of providing direct contact
+with a live human agent. Designed to convincingly simulate the way a human
+would behave as a conversational partner, chatbot systems typically require
+continuous tuning and testing, and many in production remain unable to
+adequately converse or pass the industry standard Turing test. The term
+"ChatterBot" was originally coined by Michael Mauldin (creator of the
+first Verbot) in 1994 to describe these conversational programs.
+
+•	The typical customer care chatbot can answer simple questions, such as store locations and hours, directions, and maybe even making appointments. When a question falls outside of the scope of the pre-determined question set, the option is typically to tell the customer the question isn’t valid or offer to speak to a real person.  In this project, there will be another option. If the customer question is about the operation of a device, the application shall pass the question onto Watson Discovery Service, which has been pre-loaded with the device’s owner manual. So now, instead of “Would you like to speak to a customer representative?” we can return relevant sections of the owner's manual to help solve our customers’ problems. To take it a step further, the project shall use the Smart Document Understanding feature of Watson Discovery to train it on what text in the owner's manual is important and what is not. This will improve the answers returned from the queries. With the current issue in mind, this chatbot is about providing basic information about the novel coronavirus.
+EXISTING ISSUES: 
+The novel coronavirus is a worldwide pandemic. While the doctors and scientists are trying hard to connect information and arrive at a possible vaccine, the public is left with little but scattered information. There is no one place where people can receive all the right information, like a chatbot.
+ PROPOSED SYSTEM: 
+• The queries about the COVID-19 are posted in the chatbot 
+• Front end application is built using Node-Red 
+• Watson Assistant processes all the queries put forth by the user 
+• Queries that cannot be answered using the assistant and that requires human assistant are taken care of by Watson Discovery.
+ • Watson Assistant and Discovery are connected together using webhooks
+PROJECT SCOPE:
+• Create a customer care dialog skill in Watson Assistant
+• Use Smart Document Understanding to build an enhanced Watson
+Discovery collection
+• Create an IBM Cloud Functions web action that allows Watson Assistant
+to post queries to Watson Discovery
+• Build a web application with integration to all these services & deploy
+the same on IBM Cloud Platform
+SYSTEM CONFIGURATION:
+1. Create IBM cloud services
+2. Configure Watson discovery
+3. Create Node-Red application (UI) and configure with Watson assistant
+4. Create an action using IBM functions
+5. Connect Watson assistant with a Discovery Instance
+6. Deploy and run the application 
+SYSTEM IMPLEMENTATION:
+1.	Create IBM Cloud Services
+2.	Configure Watson Discovery
+3.	Create an action using IBM Functions
+4.	Connect Watson Assistant with Watson Discovery
+PROJECT FLOW:
+1. Upload the coronavirus handbook from the internet ( UNICEF)
+2. Configure the Watson discovery instance with the handbook
+3. Create Watson assistant service instance
+4. Create a node-red application with front-end and back-end (assistant and
+discovery)
+5.Test and deploy the application.
+CONCLUSION:
+This application is a basic chatbot for coronavirus information. It provides basic
+information like description, symptoms, prevention, and al basic facts.
